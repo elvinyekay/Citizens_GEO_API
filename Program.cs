@@ -1,18 +1,22 @@
 using Citizen_Geo_API.Data;
+using Citizen_Geo_API.Profiles;
 using Citizen_Geo_API.Repositories.Interfaces;
 using Citizen_Geo_API.Repositories.Implementations;
+using Citizen_Geo_API.Services.Implementations;
+using Citizen_Geo_API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<ICitizenRepository, CitizenRepository>();
-
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<ICitizenRepository, CitizenRepository>();
+builder.Services.AddScoped<ICitizenService, CitizenService>();
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

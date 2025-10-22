@@ -1,0 +1,140 @@
+### Rider / IntelliJ IDEA ###
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+# JetBrains Rider caches
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/httpRequests/
+
+# Rider plugin-specific folders
+.idea/.idea.*
+.idea/modules.xml
+.idea/.name
+
+# User-specific configs
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+### .NET / C# ###
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]emp/
+[Tt]mp/
+TestResults/
+out/
+publish/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.cache
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.dbmdl
+*.dbproj.schemaview
+*.bak
+*.log
+*.vspscc
+*.vssscc
+*.vshost.*
+*.snupkg
+*.vs/
+*.swp
+
+# Entity Framework migrations snapshot
+*Migrations/*.Designer.cs
+*Migrations/*Snapshot.cs
+
+# Roslyn and VSCode caches
+.vscode/
+.vs/
+.vsconfig
+*.code-workspace
+
+# NuGet packages
+*.nupkg
+*.nuspec
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+!**/packages/repositories.config
+
+# Generated files
+Generated_Code/
+Generated/
+*.generated.cs
+
+# Test coverage / analysis
+coverage/
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.runsettings
+*.opencover.xml
+*.coverageinfo
+*.lcov
+*.profdata
+
+# User secrets
+secrets.json
+appsettings.*.local.json
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Docker / Environment files
+.env
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Logs and dumps
+*.log
+*.tlog
+*.dmp
+*.mdf
+*.ldf
+
+# Rider temporary folders
+.idea/.idea.*
+.idea/.gitignore
+.idea/.name
+.idea/.modules.xml
+.idea/**/contentModel.xml
+.idea/**/vcs.xml
+
+# JetBrains solution cache folders
+.idea/**/solution.xml
+.idea/**/indexLayout.xml
+.idea/**/dataSources/
+.idea/**/dataSources.local.xml
+.idea/**/dataSources.xml
+.idea/**/dataSources.id/
+.idea/**/dataSources/*.xml
+.idea/**/dataSources/.xml
+.idea/**/sqlDataSources.xml
+.idea/**/Dynamic.xml
+.idea/**/jsLibraryMappings.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/webServers.xml
+.idea/**/libraries/
+.idea/**/modules/
+.idea/**/artifacts/
+
+# Git
+.gitignore

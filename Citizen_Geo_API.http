@@ -1,0 +1,6 @@
+@Citizen_Geo_API_HostAddress = http://localhost:5177
+
+GET {{Citizen_Geo_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

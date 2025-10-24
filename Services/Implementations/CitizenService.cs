@@ -33,7 +33,12 @@ public class CitizenService :ICitizenService
     public async Task<CitizenDto> AddAsync(CitizenDto citizenDto)
     {
         var entity = _mapper.Map<Citizen>(citizenDto);
+        if (entity.BirthDate.Kind == DateTimeKind.Unspecified)
+        {
+            entity.BirthDate = DateTime.SpecifyKind(entity.BirthDate, DateTimeKind.Utc);
+        }
         var created =  await _repository.AddAsync(entity);
+        
         return _mapper.Map<CitizenDto>(created);
     }
 
@@ -41,6 +46,11 @@ public class CitizenService :ICitizenService
     {
         var existing = await _repository.GetByIdAsync(id);
         if (existing == null)  return null;
+        _mapper.Map(citizenDto, existing);
+        if (existing.BirthDate.Kind == DateTimeKind.Unspecified)
+        {
+            existing.BirthDate = DateTime.SpecifyKind(existing.BirthDate, DateTimeKind.Utc);
+        }
         var updated = await _repository.UpdateAsync(existing); 
         return _mapper.Map<CitizenDto>(updated);
     }

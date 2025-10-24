@@ -138,3 +138,5 @@ docker-compose.local.yml
 
 # Git
 .gitignore
+
+settings-files.txt
